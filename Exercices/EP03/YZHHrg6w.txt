@@ -1,0 +1,20 @@
+		int[][] t = { {1, 2, 3}, {5, 7, 6}, {4, 8, 0}};
+        Board b = new Board(t);
+        StdOut.printf("\ntoString():\n");
+        StdOut.println(b.toString());
+        StdOut.printf("\nhamming():\n");
+        StdOut.println(b.hamming());
+        StdOut.printf("\nmanhattan():\n");
+        StdOut.println(b.manhattan());
+        StdOut.printf("\nisGoal():\n");
+        StdOut.println(b.isGoal());
+        StdOut.printf("\nequals():\n");
+        int[][] t2 = { {0, 1, 3}, {4, 2, 5}, {7, 8, 6}};
+        Board b2 = new Board(t2);
+        StdOut.println(b2.toString());
+        StdOut.println(b.equals(b2));
+        StdOut.printf("\nneighbors():\n");
+        for (Board brd : b.neighbors())
+            StdOut.println(brd.toString());
+        StdOut.printf("\nisSolvable():\n");
+        StdOut.println(b.isSolvable());
